@@ -12,3 +12,4 @@ def prime(n):
 for _ in range(int(input())):
     n=int(input())
     print("YES" if prime(n) else "NO")
+    print()
