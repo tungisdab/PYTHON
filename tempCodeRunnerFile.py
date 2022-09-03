@@ -1,1 +1,2 @@
-t(*l)
+
+    if i not in a:
