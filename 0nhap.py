@@ -1,15 +1,18 @@
-import math
-def prime(n):
-    if n<2:
-        return False
-    if n<4:
-        return True
-    m=int(math.sqrt(n))+1
-    for i in range(2,m):
-        if n%i==0:
-            return False
-    return True
-for _ in range(int(input())):
-    n=int(input())
-    print("YES" if prime(n) else "NO")
+n,k=input().split()
+n=int(n)
+k=int(k)
+a=[]
+def out():
+    for i in range(1,k+1):
+        print(a[i], end=' ')
     print()
+def tohop(i):
+    for j in range(a[i-1]+1,n-k+i+1):
+        a[i]=j
+        if i==k:
+            out()
+        else:
+            tohop(i+1)
+for i in range(n):
+    a.append(0)
+tohop(1)

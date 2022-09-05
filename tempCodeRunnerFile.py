@@ -1,2 +1,1 @@
-
-    if i not in a:
+while len(n)>1:
