@@ -1,19 +1,14 @@
 s=input()
+res=0
 if len(s)==1:
     print('0')
 else:
-    res=0
     while len(s)>1:
         n=len(s)
-        if s[0]=='-':
-            ss=(ord('-')-ord('0'))
-        else:
-            ss=(ord(s[0])-48)
-        for i in range(1,n):
-            ss+=(ord(s[i])-48)
+        ss=0
+        for i in range(n):
+            ss+=(ord(s[i])-ord('0'))
         res+=1
         s=str(ss)
-    print(res)
-# if s[0]=='-':
-#     ss=(ord('-')-ord('0'))
-# print(ss)
+print(res)
+
